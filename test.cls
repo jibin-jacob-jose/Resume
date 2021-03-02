@@ -397,6 +397,8 @@
 % Others
 \newcommand{\acvSectionTopSkip}{3mm}
 \newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionContentTopSkipTwo}{1.5mm}
+
 
 
 %-------------------------------------------------------------------------------
@@ -723,6 +725,11 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-  \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \multicolumn{2}{L{\textwidth}}{{\vspace{\acvSectionContentTopSkipTwo}
+  \vspace{-.5mm}\paragraphstyle{#5}{%
+  \par
+  \vspace{3mm}
+}}
+  \descriptionstyle{#6}\vspace{1mm}}
 \end{tabular*}%
 }
