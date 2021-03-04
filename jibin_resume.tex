@@ -18,10 +18,10 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{new}
+\documentclass[11pt, a4paper]{resume}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=1.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm, voffset=0pt}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -40,38 +40,54 @@
 % \definecolor{graytext}{HTML}{5D5D5D}
 % \definecolor{lighttext}{HTML}{999999}
 
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
 %-------------------------------------------------------------------------------
-%   PERSONAL INFORMATION
-%   Comment any of the lines below if they are not required
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
+% \photo[rectangle,edge,right]{./examples/profile}
 \name{Jibin}{Jose}
-\address{Pallippurathukunnel(H),\\ Manjoor P.O, 686603,\\ Kottayam, Kerala, \\ India}
-\mobile{(+91) 9447 7676 88}
-\email{jibinjose.in@gmail.com}
-\homepage{http://jibinjose.in/}
+\address{19 Garden Heights Avenue Glenview, Hamilton 3206}
+
+\mobile{(+64) 022-461-3787}
+\email{jj@josejibin.com}
+\homepage{josejibin.com}
 \github{josejibin}
+\linkedin{jibin-jose}
+
 
 %-------------------------------------------------------------------------------
 \begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Jibin Jose~~~·~~~Curriculum Vitae}
+  {Jibin Jose~~~·~~~Résumé}
   {\thepage}
 
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
 \input{resume/summary.tex}
 \input{resume/skills.tex}
 \input{resume/experience.tex}
 \input{resume/projects.tex}
 \input{resume/volunteer.tex}
 \input{resume/education.tex}
-%\input{resume/interests-hobbies.tex}
 
 
 %-------------------------------------------------------------------------------
